@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'PT Sans' ;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:rgba(6, 62, 62, 0.942);
+}
+.project {
+    position:relative;
+    width: 500px;
+    height: 750px;
+    background:#fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) ;
+    
+}
+
+.project .poster {
+    position:relative;
+    overflow:hidden;
+   
+}
+
+.project .poster::before{
+    content: '';
+    position:absolute;
+    bottom: -150px;
+    width:100%;
+    height:100%;
+    background: linear-gradient(0deg,#5e8678 50%,transparent);
+    transition: 0.5;
+    z-index: 1;
+}
+
+.project:hover .poster::before{
+    bottom: -120px;
+}
+
+.project .poster img {
+    width: 100%;
+ 
+}
+
+.project:hover .poster img {
+    transform: translateY(-50px);
+    filter:blur(2px);
+    
+}
+
+.project .info {
+    position: absolute;
+    bottom: -270px;
+    left: 0;
+    padding: 90px;
+    width:100%;
+    z-index: 2;
+    transition: 0.5s; 
+}
+
+.project:hover .info{
+    bottom: 25px;
+}
+
+.project .info .rating{
+    position: relative;
+    padding: 5px;
+}
+
+.project .info .rating .fa-star{ 
+    color:rgb(242, 242, 21); /* sets the color of the stars to yellow*/
+    margin: 15px;
+}
+
+.project .info .rating span{
+    color:rgb(1, 40, 40); /* sets the color of the span rating, 4/5 */
+    margin-left:8px; /* space between the star rating and the numbers next to it*/
+}
+
+.project .info .tags{
+    position:relative;
+    margin-top: 5px; 
+}
+
+.project .info .tags span{
+    padding:2px 5px;
+    color:rgb(1, 40, 40);
+    background:rgb(155, 51, 13);
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.project .info .details {
+    margin-top: 30px;  
+}
+
+.project .info .cast{
+   position: relative;
+   margin-top: 20px;
+   
+}
+
+.project .info .cast span{
+    color:rgb(1, 40, 40);
+    background-color: rgb(155, 51, 13);
+    padding:2px 5px;
+    border-radius: 4px;
+    margin:4px;
+}
+
+.project .info .cast ul{
+    position:relative;
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.project .info .cast ul li{
+    list-style-type: none;
+    width:35px;
+    height:35px;
+    overflow:hidden;
+    border-radius: 50%;
+    border: 2px solid rgb(155, 51, 13);
+    margin-top: 15px;
+}
+
+.project .info .cast ul li img{
+    max-width: 100%;
+
+}
+
+
+
+    
